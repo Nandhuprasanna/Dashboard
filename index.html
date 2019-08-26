@@ -9,24 +9,20 @@
 </head>
 
 <body>
-
   <header class="header clearfix">
     <button type="button" id="toggleMenu" class="toggle_menu">
       <i class="fa fa-bars"></i>
     </button>
     <h1>Logo here</h1>    
     <button id="collapse_menu" class="burger collapse_menu">
-			<span></span>
-			<span></span>
-			<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
     </button>
     <div class= "right-menu">   
 		
     </div>
   </header>
-
-
-
   <nav class="vertical_nav">
     <ul id="js-menu" class="menu">
       <li class="menu--item  menu--item__has_sub_menu">
@@ -83,9 +79,7 @@
       </li>
     </ul>
   </nav>
-
   <div class="wrapper">
-
     <section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum interdum orci in finibus. Cras eu ante condimentum, efficitur libero vitae, rhoncus eros. Curabitur a auctor sem, ac porta metus. Ut volutpat eu neque nec mattis. Nullam viverra sem vitae diam sollicitudin pulvinar. Ut elementum urna non mollis eleifend. Cras maximus rhoncus lacus, vitae pellentesque nunc sodales a. Donec blandit nec odio sit amet porttitor.
@@ -137,31 +131,29 @@
         Curabitur sed mi sapien. Nullam ullamcorper laoreet dui, id fermentum nisl aliquam et. Proin iaculis magna fermentum nisl rutrum cursus. Quisque vitae auctor sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus aliquam, arcu commodo tristique suscipit, risus augue ullamcorper risus, in dapibus libero lacus eu odio. Praesent rutrum suscipit luctus. Pellentesque id erat nibh. Integer vel orci tristique, fermentum leo vitae, tincidunt urna. Suspendisse venenatis metus nisl, non tincidunt orci elementum ut. Curabitur vitae luctus ligula. Nunc consequat eu justo a efficitur. Vivamus eu luctus urna, sit amet aliquam ligula. Nulla euismod purus quis eros volutpat sollicitudin. Cras consequat convallis mi non vehicula.
       </p>
     </section>
-
   </div>
-
  <script type="text/javascript">
  "use strict";
-var tid = setInterval(function() {
-    if ("complete" === document.readyState) {
-        clearInterval(tid);
-        var a = document.querySelector.bind(document),
-            b = document.querySelector(".vertical_nav"),
-            c = document.querySelector(".wrapper"),
-            d = document.getElementById("js-menu"),
-            e = d.querySelectorAll(".menu--item__has_sub_menu");
-        a(".toggle_menu").onclick = function() {
-            b.classList.toggle("vertical_nav__opened"), c.classList.toggle("toggle-content")
-        }, a(".collapse_menu").onclick = function() {
-            b.classList.toggle("vertical_nav__minify"), c.classList.toggle("wrapper__minify");
-            for (var a = 0; a < e.length; a++) e[a].classList.remove("menu--subitens__opened")
-        };
-        for (var f = 0; f < e.length; f++) e[f].classList.contains("menu--item__has_sub_menu") && e[f].querySelector(".menu--link").addEventListener("click", function(a) {
-            for (var b = 0; b < e.length; b++) a.target.offsetParent != e[b] && e[b].classList.remove("menu--subitens__opened");
-            a.target.offsetParent.classList.toggle("menu--subitens__opened")
-        }, !1)
-    }
-}, 100);
+	var tid = setInterval(function() {
+		if ("complete" === document.readyState) {
+			clearInterval(tid);
+			var a = document.querySelector.bind(document),
+				b = document.querySelector(".vertical_nav"),
+				c = document.querySelector(".wrapper"),
+				d = document.getElementById("js-menu"),
+				e = d.querySelectorAll(".menu--item__has_sub_menu");
+			a(".toggle_menu").onclick = function() {
+				b.classList.toggle("vertical_nav__opened"), c.classList.toggle("toggle-content")
+			}, a(".collapse_menu").onclick = function() {
+				b.classList.toggle("vertical_nav__minify"), c.classList.toggle("wrapper__minify");
+				for (var a = 0; a < e.length; a++) e[a].classList.remove("menu--subitens__opened")
+			};
+			for (var f = 0; f < e.length; f++) e[f].classList.contains("menu--item__has_sub_menu") && e[f].querySelector(".menu--link").addEventListener("click", function(a) {
+				for (var b = 0; b < e.length; b++) a.target.offsetParent != e[b] && e[b].classList.remove("menu--subitens__opened");
+				a.target.offsetParent.classList.toggle("menu--subitens__opened")
+			}, !1)
+		}
+	}, 100);
 
   class Menu {
   constructor(menu) {
@@ -188,12 +180,8 @@ var tid = setInterval(function() {
 
     });
   }}
-
-
 const $js = document.querySelector(".banner");
-
 new Menu($js);
-  </script>
-
+</script>
 </body>
 </html>
